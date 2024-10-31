@@ -159,10 +159,17 @@ header button:hover {
 
 .hero-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   background-color: var(--primary-color);
   height: 100vh;
+}
+
+.hero-section img {
+  border-radius: 50%;
+  background-color: var(--primary-light-color);
+  border: 2px solid var(--primary-theme-color);
+  box-shadow: 2px 2px 30px var(--primary-theme-color);
 }
 
 .hero-text {
@@ -170,13 +177,6 @@ header button:hover {
   padding: 20px;
 }
 
-.hero-img {
-  padding: 80px 40px 0px;
-}
-
-.hero-img img {
-  width: 1000px;
-}
 .social-icon {
   margin-top: 10px;
   display: flex;
@@ -415,7 +415,11 @@ footer p a:hover {
 
   /* hero section media queries */
   .hero-section {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  .hero-section img {
+    height: auto;
   }
 
   /* service section */
