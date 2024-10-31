@@ -1,52 +1,45 @@
+let menuIcon = document.querySelector(".menu-icon");
+let cancelIcon = document.querySelector(".cancel-icon");
+let headerLinks = document.querySelector(".header-links");
 
-
-
-let menuIcon = document.querySelector('.menu-icon');
-let cancelIcon = document.querySelector('.cancel-icon');
-let headerLinks = document.querySelector('.header-links');
-
-menuIcon.addEventListener('click', function () {
-  headerLinks.style.display = 'block';
-  headerLinks.style.right = '0';
+menuIcon.addEventListener("click", function () {
+  headerLinks.style.display = "block";
+  headerLinks.style.right = "0";
 });
 
-cancelIcon.addEventListener('click', function () {
-
-  headerLinks.style.right = '-100vh';
-  headerLinks.style.display = 'none';
+cancelIcon.addEventListener("click", function () {
+  headerLinks.style.right = "-100vh";
+  headerLinks.style.display = "none";
 });
 
 // theme color change script
-let themeInput = document.getElementById('theme');
+let themeInput = document.getElementById("theme");
 const root = document.documentElement; // Get the root element (<html>)
-const primaryThemeColor = getComputedStyle(root).getPropertyValue('--primary-theme-color');
+const primaryThemeColor = getComputedStyle(root).getPropertyValue(
+  "--primary-theme-color"
+);
 themeInput.value = primaryThemeColor;
 
-themeInput.addEventListener('change', function () {
+themeInput.addEventListener("change", function () {
   // Get the value of the input element when it changes
   const color = themeInput.value;
-  document.documentElement.style.setProperty('--primary-theme-color', color);
+  document.documentElement.style.setProperty("--primary-theme-color", color);
 });
-
-
-
-
-
 
 // typing animation
 
 document.addEventListener("DOMContentLoaded", function () {
   const options = {
-    strings: ['DEVELOPER', 'DESIGNER', 'YOUTUBER' ],
+    strings: ["DEVELOPER", "DESIGNER", "CONTENT CREATOR"],
     typeSpeed: 150,
     backSpeed: 50,
     backDelay: 1000,
-    loop: true
+    loop: true,
   };
 
-  const multiTextElement = document.querySelector('.multi-text');
+  const multiTextElement = document.querySelector(".multi-text");
   let currentTextIndex = 0;
-  let currentText = '';
+  let currentText = "";
   let isDeleting = false;
 
   function type() {
@@ -67,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!isDeleting && currentText === fullText) {
       typeSpeed = options.backDelay;
       isDeleting = true;
-    } else if (isDeleting && currentText === '') {
+    } else if (isDeleting && currentText === "") {
       isDeleting = false;
       currentTextIndex = (currentTextIndex + 1) % options.strings.length;
     }
@@ -77,5 +70,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   type();
 });
-
-

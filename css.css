@@ -162,6 +162,7 @@ header button:hover {
   justify-content: space-around;
   align-items: center;
   background-color: var(--primary-color);
+  height: 100vh;
 }
 
 .hero-text {
@@ -174,7 +175,7 @@ header button:hover {
 }
 
 .hero-img img {
-  width: 750px;
+  width: 1000px;
 }
 .social-icon {
   margin-top: 10px;
@@ -223,11 +224,12 @@ header button:hover {
 
 /* about section */
 .about-section {
+  height: 100vh;
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 80px;
+  padding: 100px 80px;
 }
 
 .img-div {
@@ -274,6 +276,7 @@ header button:hover {
 /* service section */
 
 .service-section {
+  height: 100vh;
   background-color: var(--primary-light-color);
   color: var(--primary-white);
   display: flex;
@@ -328,6 +331,7 @@ header button:hover {
   align-items: center;
   flex-direction: column;
   padding: 60px 80px;
+  height: 100vh;
 }
 
 .contact-section h1 {
